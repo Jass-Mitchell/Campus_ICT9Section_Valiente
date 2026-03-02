@@ -65,7 +65,7 @@ body{
 <br><br><br>
 <div class="container-fluid" style="display:flex; justify-content: center;">
   <div style=" display: flex; justify-content: center; align-items:flex-start; gap: 20px; padding: 20px; background-color: rgba(255, 255, 255, 0.762); border-radius:20px;box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
-
+<!--Makes the forms color,shape,alignment, and shadow -->
 <div style="display: flex;  gap: 20px; padding: 20px;">
 		<div id= "photo">
 		<img src= 
@@ -76,14 +76,14 @@ body{
   
 <div class="bold display-5" id="my_res" style= "color:#ffffff; text-shadow: 2px 2px 5px rgba(0,0,0,0.5); text-align: left;">
 <h1> Fare Matrix</h1>
-
+<!-- adds a title-->
 
 <div class="bold display-5" id="my_res2" style= "color:#213579; text-align: left;">
 <h2> Pickup point </h2>
 
 
 <select id = "pickup" name = "section" style="font-size: 30px; background-color: #ffffff; color:#3251b5 ;">
-			<option value= "1">Santolan</option>
+			<option value= "1">Santolan</option> <!-- gives different values/options for the computation later-->
       <option value= "2">Roosevelt</option>
       <option value= "3">North Avenue</option>
 		</select>
@@ -92,7 +92,7 @@ body{
 <div class="bold display-5" id="my_res" style= "color:#213579; text-align: left;">
 <h2> Drop off point</h2>
 <select id = "dropoff" name = "section" style="font-size: 30px;background-color: #ffffff; color:#3251b5 ;">
-			<option value= "13">Recto</option>
+			<option value= "13">Recto</option> <!-- gives the other values -->
       <option value= "15">Baclaran</option>
       <option value= "16">Taft Avenue</option>
 		</select>
@@ -100,7 +100,7 @@ body{
 <input type="checkbox" id="disc" style="display:none;">
 <input type = "button" id = "submit1" name = "submit" value = "Regular fare" onclick="document.getElementById('disc').checked=false; calculateFare();" style="font-size: 30px;background-color:#3251b5 ; color:#ffffff ;">
 <input type = "button" id = "submit2" name = "submit" value = "Discounted fare" onclick="document.getElementById('disc').checked=true; calculateFare();" style="font-size: 30px;background-color:#3251b5 ; color:#ffffff ;">
-
+<!-- submits the values picked earlyier during options to be calculated -->
 </div>
 </div>
 
@@ -131,13 +131,15 @@ body{
 
         let fare = basefare + extraKM * perKMrate;
 
-        fare = fare * (1-0.2 * discount);
+        fare = fare * (1-0.2 * discount);   
 
-        document.getElementById("DisplayAns").innerHTML = "₱" + fare.toFixed(2);
+        document.getElementById("DisplayAns").innerHTML = "₱" + fare.toFixed(2);  
+		
     }
     
 </script>
 </html>
+
 
 
 
